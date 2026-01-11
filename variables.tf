@@ -24,6 +24,7 @@ variable "subnet_config" {
     public = optional(bool, false)
   }))
 
+  description = "Subnet configuration details"
   validation {
     condition = alltrue(
       [for key, value in var.subnet_config :

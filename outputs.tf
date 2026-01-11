@@ -17,6 +17,7 @@ output "public_subnets" {
 }
 
 output "private_subnets" {
+  description = "created private subnets with id and availability zone"
     value = {
     for key, value in local.private_subnets :
     key => {
